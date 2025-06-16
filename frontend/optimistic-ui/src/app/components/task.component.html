@@ -1,0 +1,60 @@
+<div class="container mt-4">
+  <h2 class="mb-3">Task Manager</h2>
+
+  <form (ngSubmit)="save()" class="mb-4">
+    <input class="form-control mb-2" [(ngModel)]="task.title" name="title" placeholder="Title" required />
+    <input class="form-control mb-2" [(ngModel)]="task.description" name="description" placeholder="Description" required />
+    
+    <div class="mb-2 text-muted" *ngIf="task.updatedBy">
+      Last updated by {{ task.updatedBy }} at {{ task.updatedAt }}
+    </div>
+
+    <button type="submit" class="btn btn-primary me-2 hover-button">Save</button>
+    <button type="button" class="btn btn-secondary hover-button" (click)="clear()">Clear</button>
+  </form>
+  <div *ngIf="auditLogs.length > 0" class="audit-section mt-4">
+  <h4>Audit History</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Updated By</th>
+        <th>Updated At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let log of auditLogs">
+        <td>{{ log.title }}</td>
+        <td>{{ log.description }}</td>
+        <td>{{ log.updatedBy }}</td>
+        <td>{{ log.updatedAt }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Last Updated By</th>
+        <th>Updated At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of tasks">
+        <td>{{ t.title }}</td>
+        <td>{{ t.description }}</td>
+        <td>{{ t.updatedBy }}</td>
+        <td>{{ t.updatedAt }}</td>
+        <td>
+          <button class="btn btn-sm btn-outline-success hover-button" (click)="edit(t)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> 

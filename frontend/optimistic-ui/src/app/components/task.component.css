@@ -1,0 +1,104 @@
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+form {
+  margin-bottom: 40px;
+}
+
+input.form-control {
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+button {
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.hover-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.text-muted {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.audit-section {
+  margin-top: 40px;
+}
+
+.audit-section h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.audit-section table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.audit-section th,
+.audit-section td {
+  padding: 14px 16px;
+  border: 1px solid #e3e3e3;
+  font-size: 0.95rem;
+}
+
+.audit-section th {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: 500;
+}
+
+.audit-section tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table thead th {
+  background-color: #e9ecef;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.table td,
+.table th {
+  padding: 14px;
+  vertical-align: middle;
+  font-size: 0.95rem;
+}
+
+.btn-outline-success {
+  min-width: 80px;
+}
