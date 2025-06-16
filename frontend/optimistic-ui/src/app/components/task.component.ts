@@ -36,8 +36,8 @@ export class TaskComponent implements OnInit {
     this.taskService.save(this.task).subscribe({
       next: (savedTask) => {
         this.task = savedTask;
-        this.loadTasks(); // refresh the list
-        this.loadAuditLogs(savedTask.id!); // ✅ Fixed line
+        this.loadTasks(); 
+        this.loadAuditLogs(savedTask.id!); 
       },
       error: (error) => {
         console.error('Save failed:', error);
@@ -50,7 +50,7 @@ export class TaskComponent implements OnInit {
     this.task = { ...task };
 
     if (task.id !== undefined) {
-      this.loadAuditLogs(task.id); // ✅ Use reusable method
+      this.loadAuditLogs(task.id); 
     } else {
       this.auditLogs = [];
     }
